@@ -1,0 +1,22 @@
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+flex-direction: column;
+display: flex;
+align-self: center;
+align-items: center;
+position: fixed;
+left: 38%;
+background-color: grey;
+/* top: 20rem; */
+/* height: 10vh; */
+width: 40vw;
+
+}
+
+.h1{
+    font-size: 2rem;
+}

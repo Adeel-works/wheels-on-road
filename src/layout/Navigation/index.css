@@ -1,0 +1,51 @@
+.App {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar li:hover {
+    background-color: #555;
+  }
+  
+  .sidebar li.active {
+    background-color: #555;
+  }
+  
+  .sidebar li:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  
+  .sidebar li:hover,
+  .sidebar li.active {
+    color: #fff;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  

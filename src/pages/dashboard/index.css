@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card{
+    background-color: rgb(226, 226, 226);
+    width: 32vw;
+    margin: 5px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    /* text-align: center; */
+    transition: 0.5s;
+
+}
+
+.card:hover{
+    background-color: grey;
+    scale: 1.05;
+    transition: 0.5s;
+}
+
+.h1{
+    font-size: 2rem;
+}
+
+.header{
+    flex-direction: row;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
