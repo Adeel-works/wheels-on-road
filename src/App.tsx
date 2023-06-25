@@ -35,32 +35,35 @@ function App() {
   
   return (
     <AuthContext.Provider value={{ auth, setAuth:setTokens }}>
-    {auth==null ? 
     
         <Routes>
+    <Route
+          path="*"
+          element={auth!=null
+            ?  <ProtectedRoute >
+            <PermanentDrawerLeft >
+              <Header />
+            <div className="content">
+            <Routes>
+       
+              <Route path='/' Component={Dashboard}/>
+              <Route path='/categories' Component={Categories}/>
+              <Route path='/vehicles' Component={Vehicles}/>
+              </Routes>
+              </div>
+              </PermanentDrawerLeft>
+              </ProtectedRoute>
+            : <Navigate to="/login" replace />
+          }
+        />
+        <Route path='/login' Component={Login}/>
+        <Route path='/sign-up' Component={SignUp}/>
 
-    <Route path='/login' Component={Login}/>
-          <Route path='/sign-up' Component={SignUp}/>
           </Routes>
     
+
     
-    
-     : 
-        <ProtectedRoute >
-        <PermanentDrawerLeft >
-          <Header />
-        <div className="content">
-        <Routes>
-   
-          <Route path='/home' Component={Dashboard}/>
-          <Route path='/categories' Component={Categories}/>
-          <Route path='/vehicles' Component={Vehicles}/>
-          </Routes>
-          </div>
-          </PermanentDrawerLeft>
-          </ProtectedRoute>
-    
-    }
+  
     <ToastContainer />
 
     </AuthContext.Provider>

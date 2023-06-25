@@ -14,8 +14,8 @@ export const useLogin = () => {
 
 
     const [user,setUser] = useState<User>({
-        email:'',
-        password:''
+        email:'manager@gmail.com',
+        password:'Admin@123'
     });
     
     const handleInput = (value:string,key:'email'|'password') => {
@@ -36,7 +36,7 @@ export const useLogin = () => {
     const handleSignIn = () => {   
         Network.post('/auth',{...user}).then((res)=>{
             console.log(res?.data);
-            navigate(`../${'home'}`,{replace:true})
+            navigate(`../`,{replace:true})
             context.setAuth(res?.data);
             // localStorage.setItem('auth',res?.data)
         }).catch(err=>{

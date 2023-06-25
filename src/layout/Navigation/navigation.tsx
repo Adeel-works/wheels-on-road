@@ -9,7 +9,7 @@ export default function PermanentDrawerLeft({children}:{children:React.ReactNode
 
   const routes = [
     {
-        id:'home',
+        id:'/',
         name:'Home',
     },
     {
